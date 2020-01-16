@@ -1,0 +1,15 @@
+pragma cashscript ^0.3.1;
+
+contract memo_retval(bytes20 pkh) {
+
+    // Require pk to match stored pkh and signature to match
+    function spend(pubkey pk, sig s) {
+        require(hash160(pk) == pkh);
+        require(checkSig(s, pk));
+    }
+    
+    // Validates whether the token ID used in the TypeScript logic matches the ID permanently stored onchain
+    function validateTokenId(string localTokenId, string onchainTokenId) {
+		require(localTokenId == onchainTokenId);
+    }
+}
