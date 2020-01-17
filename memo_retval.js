@@ -1,3 +1,12 @@
+/*
+ * This example demonstrates the: 
+ * 	- retrieval of an onchain memo via the blockpress decoder
+ * 	- new expanded error handles in CashScript 0.3.1
+ *	- usage of FailedRequireError to enable a more specific boolean outcome to be returned from contract to JS 
+ * 
+ * Note: ensure your CashScript SDK /cashc is updated to 0.3.1
+ */
+
 const { BITBOX } = require('bitbox-sdk');
 const { Contract, Sig, FailedRequireError, FailedSigCheckError, FailedTransactionError } = require('cashscript');
 const path = require('path');
