@@ -1,4 +1,4 @@
-pragma cashscript ^0.3.1;
+pragma cashscript 0.3.1;
 
 contract memo_retval(bytes20 pkh) {
 
